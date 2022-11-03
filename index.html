@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resonponsive CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+  }
+  
+  body{
+    background:lightblue;
+    display:flex;
+    min-height:100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .container{
+    position :relative;
+    width:100%;
+    max-width:1000px;
+    min-height: 1000px;
+    background:#fff;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+    margin:50px;
+  }
+  
+  .container .left_side{
+    position:relative;
+    background :#003147;
+    padding:40px;
+  }
+
+  
+  .profileText{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    
+    padding-bottom:20px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+  }
+
+  .profileText .imgBx{
+    position: relative ;
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+.profileText .imgBx img{
+  position: absolute;
+  top:0;
+  left :0;
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+.profileText h2
+{
+  color:#fff;
+  font-size:1.45em;
+  margin-top:20px;
+  text-transform: uppercase;
+  text-align:center;
+  font-weight:600;
+  line-height:1.4em;
+}
+.profileText h2 span{
+  font-size:0.6em;
+  font-weight :300;
+}
+
+.contactInfo{
+  padding-top:40px;
+}
+.title{
+  color:#fff;
+  text-transform: uppercase;
+  font-weight:600;
+  letter-spacing: 1px;
+  margin-bottom:20px;
+  
+  
+}
+.contactInfo ul{
+  position:relative;
+}
+.contactInfo ul li{
+  position: relative ;
+  list-style: none;
+  margin:10px 0;
+  cursor:pointer;
+}
+.contactInfo ul li .icon{
+  display: inline-block;
+  width:30px;
+  font-size:18px;
+  color:#03a9f4;
+}
+.contactInfo ul li span{
+  color: #fff;
+  font-weight:300;
+}
+.text{
+  font-size: 13.5px;
+}
+
+.contactInfo.education li{
+ margin-bottom: 15px;
+}
+
+.contactInfo.education h5{
+  color: #03a9f4;
+  font-weight:500;
+}
+.contactInfo.education h4{
+  color:#fff;
+  font-weight:300;
+}
+.contactInfo.education h4:nth-child(2){
+  font-weight:500;
+  
+}
+
+
+.contactInfo.languages .percent{
+  position: relative;
+  width:100%;
+  height:6px;
+  background:#081921;
+  display:block;
+  margin-top:5px;
+}
+.contactInfo.languages .percent div {
+  Position:absolute;
+  top:0;
+ left:0;
+  height:100%;
+  background: #03a9f4;
+}
+
+#sp li{
+  color:white;
+  font-weight: 400;
+}
+
+#sp{  display:grid;
+  grid-template-columns: repeat(2,1fr)
+ 
+}
+
+
+
+
+
+
+
+ .container .right_side{
+    position:relative;
+    background :#fff;
+    padding:40px;
+  }
+.about{
+  margin-bottom: 50px;
+}
+.about:last-child{
+  margin-bottom:0;
+}
+.title2{
+  color:#003147;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+p{
+  color: #333;
+}
+
+
+.about .box{
+  display: flex;
+  flex-direction: row;
+ margin:20px 0;
+}
+.about .box .year_company{
+  min-width: 150px;
+}
+.about .box .year_company h5{
+  text-transform: uppercase;
+  color:#848c90;
+  font-weight:600;
+}
+.about .box .text h4{
+  text-transform: uppercase ;
+  color:#2a7da2;
+  font-size: 16px;
+}
+
+.skills .box{
+  position:relative;
+  width:100%;
+  display:grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.skills .box h4{
+  text-transform: uppercase;
+  color:#848c99;
+  font-weight:500;
+}
+.skills .box .percent{
+  position:relative;
+  width:100%;
+  height:10px;
+  background: #f0f0f0;
+}
+.skills .box .percent div{
+  Position: absolute ;
+  top:0;
+  left:0;
+  height:100%;
+  background:#03a9f4;
+}
+
+.interest ul{
+  display:grid;
+  grid-template-columns: repeat(4,1fr)
+}
+.interest ul li{
+  list-style-type: none;
+  color:#333;
+  font-weight:500;
+  margin:10px 0px;
+  font-size: 12.1px;
+}
+.interest ul li .fa{
+  color:#03a9f4;
+  font-size: 16px;
+  width:20px;
+}
+
+
+@media (max-width:700px)
+{
+  .container{
+    margin:10px;
+grid-template-columns: repeat(1,1fr);}
+
+  .interest ul{
+    grid-template-columns: repeat(2,1fr)
+  }
+}
+
+@media (max-width:600px){
+  .about .box{
+    flex-direction: column;
+  }
+  .about.box .year_company{
+    min-width:150px;
+    margin-bottom:5px;
+  }
+  .interest ul{
+    grid-template-columns: repeat(1,1fr)
+  }
+  .skills .box{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="left_side">
+    <div class="profileText">
+      <div class="imgBx">
+        <img src="/personal projects/IMG_20221029_205322.jpg" >
+        </div>
+        <h2>Yernagula Saiteja<br><span>FrontEnd Developer</span></h2>
+   </div>
+    <div class="contactInfo">
+      <h3 class="title">contact Info</h3>
+      <ul>
+        <li>
+          <span class="icon"><i class="fa fa-phone" arial-hidden="true"></i></span>
+          <span class="text">8125716044</span>
+        </li>
+        
+      <li>
+         <span class="icon"><i class="fa fa-envelope-o" arial-hidden="true"></i></span>
+          <span class="text">saiteja.yernagula@gmail.com</span>
+        </li>
+        <li>
+         <span class="icon"><i class="fa fa-linkedin" arial-hidden="true"></i></span>
+          <span class="text">Linkedin - saiteja-yernagula</span>
+        </li>
+        
+
+        <li>
+         <span class="icon"><i class="fa fa-map-marker" arial-hidden="true"></i></span>
+          <span class="text">Vizag - Andhrapradesh ,India</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="contactInfo education">
+      <h3 class="title">Education </h3>
+      <ul>
+        <li>
+          <h5>2017 - 2021</h5>
+          <h4>Bachelor of technology in mechanical engineering</h4>
+          <h4>Vitam college</h4>
+        </li>
+         <li>
+          <h5>2014 - 2017</h5>
+          <h4>Diplamo in mechanical</h4>
+          <h4>Cprp govt college</h4>
+        </li>
+        </ul>
+    </div>
+    
+
+    <div class="contactInfo languages">
+<h3 class="title">Languages</h3>
+<ul>
+  <li>
+    <span class="text">English</span>
+    <span class="percent">
+      <div style="width:90%;"></div>
+    </span>
+  </li>
+    <li>
+    <span class="text">Telugu</span>
+    <span class="percent">
+            <div style="width:95%;"></div>
+
+    </span>
+  </li>
+</ul>
+    </div>
+        <div class="contactInfo education">
+      <h3 class="title">Projects </h3>
+      <ul>
+        <li>
+          <h5>Personal portfolio website</h5>
+          <h4>
+          Project link: https://saiteja-yernagula.netlify.app/
+</h4>
+          <h4>Technnologies Used : Html, Css, & Javascript.<br>
+          Duration: 8hours.
+</h4>
+        </li>
+
+        </ul>
+    </div>
+    
+        <div class="contactInfo interest">
+        <h3 class="title">Strengths</h3>
+        <ul id="sp">
+          <li><i class="fa fa-bullseye"></i>Dedication</li>
+          
+           <li><i class="fa fa-hourglass-2"></i>Consistence</li>
+          
+           
+        </ul>
+    </div>  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="right_side">
+    <div class="about">
+      <h2 class="title2">Profile</h2>
+      <p>Observant and detail-oriented aspiring frontend developer. Self-motivated
+
+and curious with a keen interest in building user centric products. Looking
+
+forward to work in a challenging environment with a passion to stay
+updated with latest technologies to help improve product experience.</p>
+    </div>
+    
+    <div class="about">
+    <h2 class="title2">Experience</h2>
+     <div class="box">
+       <div class="year_company">
+         <h5>2021 - Present</h5>
+         <h5>Financial Markets</h5>
+       </div>
+       <div class="text">
+         <h4>Investor</h4>
+         <p>* Reading Annual reports<br>
+         * Fundamental Analysis<br>
+         * Diversification and Asset allocation 
+        </p>
+       </div>
+     </div>
+     
+    <div class="box">
+       <div class="year_company">
+         <h5>2018 - 2020</h5>
+         <h5>Healthywayz</h5>
+       </div>
+       <div class="text">
+         <h4>Star Executive</h4>
+         <p>
+
+*  Developing a marketing strategy based on product knowledge and
+
+industry trends<br>
+* Creating a plan for generating leads and closing sales, attending
+industry events, making phone calls to potential clients<br>
+* Maintaining relationships with current customers to ensure they are
+satisfied and will continue to purchase products or services in the
+future<br>
+* Building a network of contacts within an industry or community by
+initiating contact with potential clients and establishing personal
+relationships over time<br>
+* Training sales agents on how to sell products or services effectively<br>
+* Providing customer service to clients by answering questions about
+products or services provided by the company<br>
+</p>
+       </div>
+     </div>
+    </div>
+
+    
+    <div class="about skills">
+        <h2 class="title2">Professional Skills</h2>
+        <div class="box">
+          <h4>Html</h4>
+          <div class="percent">
+            <div style="width:90%";></div>
+</div>
+        </div>
+        <div class="box">
+          <h4>Css</h4>
+          <div class="percent">
+          <div style="width:90%";></div></div></div>
+        <div class="box">
+          <h4>Javascript</h4>
+          <div class="percent">
+       <div style="width:70%";></div></div>
+
+        </div>
+         <div class="box">
+          <h4>React</h4>
+          <div class="percent">
+          <div style="width:65%";></div></div>
+
+        </div>
+        <div class="box">
+          <h4>Github</h4>
+          <div class="percent">
+           <div style="width:80%";></div>
+           </div>
+
+        </div>
+       <div class="box">
+          <h4>Photoshop</h4>
+          <div class="percent">
+          <div style="width:90%";></div></di>
+        </div>
+     </div>
+
+    <div class="about interest">
+        <h2 class="title2">Softskills</h2>
+        <ul>
+          <li><i class="fa fa-globe"></i>Leadership</li>
+           <li><i class="fa fa-group"></i>Team Work</li>
+          <li><i class="fa fa-sitemap"></i>Startegic Planning</li>
+           <li><i class="fa fa-handshake-o"></i>Communication Skills</li>
+
+        </ul>
+    </div> 
+
+
+
+    <div class="about interest">
+        <h2 class="title2">Interest</h2>
+        <ul>
+          <li><i class="fa fa-gamepad"></i>Badminton</li>
+           <li><i class="fa fa-book"></i>Learning things</li>
+          <li><i class="fa fa-flash"></i>doing workouts</li>
+           <li><i class="fa fa-motorcycle"></i>weekend trips</li>
+        </ul>
+    </div>  
+        
+        <div class="about">
+      <h2 class="title2">Achievement & Awards</h2>
+      <p>
+        * Lead more than 50+ team members in the organisation over the span of
+
+three years<br>
+
+* Achieved national & international contests and major executive ranks in
+the Healthywayz<br>
+* Almost submitted more than 30lakhs+ turnover in the company
+    </div>
+        
+        
+  </div>
+</div>
+
+</body>
+
+</html>
